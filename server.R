@@ -16,12 +16,6 @@ library(cmi)
 
 # ======== data items ========
 
-credentials <- data.frame(
-  user = "actuary",
-  password = cmi::cmi_dashboard_pw,
-  stringsAsFactors = FALSE
-)
-
 max_iteration <- 500 ## <-- keeping max_iteration low as Shiny server could become overloaded if keep at 10,000. Will cause APCI to give up sometimes
 
 extract_slider_vars_rp <-
