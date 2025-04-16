@@ -52,7 +52,6 @@ fluidPage(
   When the APCI is solved the results are blended into a mortality projection, using the Projection parameters. As this is computationally simpler, the dashboard is immediately reactive to these parameters.
   <div style='margin-top: 0.5em;'>
   </div>
-    The datasets `CMI_2022 Male` and `CMI_2022 Female` are the core calibration datasets used by the CMI 2022 and are sourced from the ONS. Selection of either of these <b>should</b> lead to mortality improvements identical to the CMI Mortality Projection Model 2022 (see Disclaimer).
     The `Synthetic` dataset is a simulated dataset. The output from this is a purely fictitious demonstration.
   <div style='margin-top: 0.5em;'>
   </div>
@@ -77,9 +76,10 @@ fluidPage(
 
   p(HTML("
   The underlying code to produce the mortality improvement projections is not made available. However, the code to produce the dashboard can be found here:
-  <a href='https://github.com/paulbeardactuarial/cmi_dashboard' target='_blank'>
-    https://github.com/paulbeardactuarial/cmi_dashboard
-  </a>.
+  <a href='https://github.com/paulbeardactuarial/cmi_dashboard' target='_blank'>https://github.com/paulbeardactuarial/cmi_dashboard</a>.
+    <div style='margin-top: 0.5em;'>
+  </div>
+  There is an expanded version of this dashboard which runs on same dataset(s) as the CMI_2022 Mortality Projection Model and produces the same outputs. Login detais are reqired for this (contact author if you are interested). This version can be found here: <a href='https://paulbeardactuarial.shinyapps.io/cmi_dashboard' target='_blank'>https://paulbeardactuarial.shinyapps.io/cmi_dashboard/</a>
 ")),
 
   h3("The Dashboard"),
