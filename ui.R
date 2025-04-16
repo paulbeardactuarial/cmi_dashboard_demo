@@ -3,7 +3,6 @@ library(ggplot2)
 library(ggiraph)
 library(cmi)
 library(shinyWidgets)
-library(shinymanager)
 
 ui <-
 fluidPage(
@@ -116,27 +115,14 @@ fluidPage(
         tags$h4("Choice of Dataset", style = "margin-top: 0;"),
 
         div(
-      radioGroupButtons(
-        inputId = "dataSetUsed",
-        selected = "synthetic",
-        width = "95%",
-        choiceNames = c("CMI_2022 Male", "CMI_2022 Female", "Synthetic"),
-        choiceValues = c("male", "female", "synthetic"),
-        justified = TRUE,
-        checkIcon = list(yes = icon("ok", lib = "glyphicon")
-        )
-
-        # synthetic only...
-
-        # div(
-        # radioGroupButtons(
-        #   inputId = "dataSetUsed",
-        #   selected = "synthetic",
-        #   width = "40%",
-        #   choiceNames = "Synthetic",
-        #   choiceValues = "synthetic",
-        #   justified = TRUE,
-        #   checkIcon = list(yes = icon("ok", lib = "glyphicon"))
+        radioGroupButtons(
+          inputId = "dataSetUsed",
+          selected = "synthetic",
+          width = "40%",
+          choiceNames = "Synthetic",
+          choiceValues = "synthetic",
+          justified = TRUE,
+          checkIcon = list(yes = icon("ok", lib = "glyphicon"))
 
 
   ))))),
@@ -413,4 +399,4 @@ fluidPage(
       tags$link(rel = "stylesheet", href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css")
     )
   )
-)  |>  secure_app()
+)

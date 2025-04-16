@@ -8,7 +8,6 @@ library(remotes)
 library(withr)
 library(scales)
 library(patchwork)
-library(shinymanager)
 if (!require("cmi")) {
   remotes::install_github("paulbeardactuarial/cmi")
 }
@@ -46,11 +45,6 @@ extract_slider_vars_rp <-
 # ======== main server function ========
 
 function(input, output, session) {
-
-  # check_credentials
-  res_auth <- secure_server(
-    check_credentials = check_credentials(credentials)
-  )
 
   # run parameters
 
@@ -164,7 +158,6 @@ function(input, output, session) {
   # switch to stop rendering outputs in cases where values ain't right
   shouldRenderAllOutputs <- reactiveVal(value = TRUE)
   observe({
-    req(res_auth$result) # <- required to stop app crashing when authentifaction was added
     model <- cmi_proj_model()
     cohort_min <- input$cohortRange[1]
     age_min <- input$ageRange[1]
