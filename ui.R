@@ -10,13 +10,18 @@ fluidPage(
 
   # Static banner at the top with specified color and text
   tags$div(
-    style = "background-color: #008CBA; width: 100%; padding: 18px; margin-bottom: 18px;",
+    style = "background-color: #008CBA; width: 100%; padding: 24px; margin-bottom: 24px;",
     tags$a(
       href = "https://paulbeardactuarial.github.io/",
-      style = "color: white; text-decoration: none; font-weight: none; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 2rem;",
+      style = "color: white; text-decoration: none; font-weight: none; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 2.5rem;",
       "paulbeardactuarial.github.io"
     )
   ),
+  tags$style(HTML("
+    body {
+      font-size: 16px;
+    }
+  ")),
   tags$head(
     tags$style(HTML("
       .btn-disabled {
