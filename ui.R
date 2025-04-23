@@ -18,9 +18,12 @@ fluidPage(
     )
   ),
   tags$style(HTML("
-    body {
-      font-size: 16px;
+     body {
+      font-size: 17px;
     }
+             h3 {
+        padding-top: 1.3em;  /* Adds extra half-line space above the title */
+      }
   ")),
   tags$head(
     tags$style(HTML("
@@ -57,7 +60,7 @@ fluidPage(
   When the APCI is solved the results are blended into a mortality projection, using the Projection parameters. As this is computationally simpler, the dashboard is immediately reactive to these parameters.
   <div style='margin-top: 0.5em;'>
   </div>
-    The `Synthetic` dataset is a simulated dataset. The output from this is a purely fictitious demonstration.
+    <b>The `Synthetic` dataset is a simulated dataset. The output from this is a purely fictitious demonstration.</b>
   <div style='margin-top: 0.5em;'>
   </div>
   The outputs are two plots. A heatmap and a line chart showing the mortality improvements. The line chart can be switched to view by either age, year or cohort.
@@ -84,11 +87,13 @@ fluidPage(
   <a href='https://github.com/paulbeardactuarial/cmi_dashboard' target='_blank'>https://github.com/paulbeardactuarial/cmi_dashboard</a>.
     <div style='margin-top: 0.5em;'>
   </div>
-  There is an expanded version of this dashboard which runs on same dataset(s) as the CMI_2022 Mortality Projection Model and produces the same outputs. Login detais are reqired for this (contact author if you are interested). This version can be found here: <a href='https://paulbeardactuarial.shinyapps.io/cmi_dashboard' target='_blank'>https://paulbeardactuarial.shinyapps.io/cmi_dashboard/</a>
+  There is an expanded version of this dashboard which runs on same dataset(s) as the CMI_2022 Mortality Projection Model and produces the same outputs. Login detais are reqired for this (contact author paul.beard.actuarial@gmail.com if you are interested). This version can be found here: <a href='https://paulbeardactuarial.shinyapps.io/cmi_dashboard' target='_blank'>https://paulbeardactuarial.shinyapps.io/cmi_dashboard/</a>
 ")),
 
   h3("The Dashboard"),
-
+  div(HTML("<br>")),
+  wellPanel(
+    style = "background-color: transparent; border: 10px solid #008CBA; border-radius: 5px; padding: 20px;",
   tags$style(HTML(
     "
     .label-left .form-group {
@@ -363,6 +368,7 @@ fluidPage(
       style = "margin-top: 15px;",
       girafeOutput("heatmap", width = "100%")
     )
+  )
   ),
 
   div(
